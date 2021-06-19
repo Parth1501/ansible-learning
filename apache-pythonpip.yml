@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: install apache
+    apt: name=apache2 update_cache=yes state=latest
+   
+  - name: install python pip
+    apt: name=python-pip update_cache=yes state=latet
+    
+  - name: install python environment
+    apt: name=python-virtualenv update_cache=yes state=latet
+    
